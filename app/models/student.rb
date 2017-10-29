@@ -18,7 +18,7 @@ class Student < ActiveRecord::Base
     if student_name.empty?
       Student.all
     else
-      found_student = Student.where("name like ?", "#{student_name}")
+      found_student = Student.where("name like ?", "#{student_name}%")
     end
   end
 
