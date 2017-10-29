@@ -19,6 +19,7 @@ class Student < ActiveRecord::Base
       Student.all
     else
       found_student = Student.where("name = 'student_name'")
+      binding.pry
     end
   end
 
