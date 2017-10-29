@@ -19,7 +19,6 @@ class Student < ActiveRecord::Base
       Student.all
     else
       found_student = Student.where("name = 'student_name'")
-      <%= render partial: "student", locals: {student: @student} %>
     end
   end
 
