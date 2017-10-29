@@ -18,8 +18,7 @@ class Student < ActiveRecord::Base
     if student_name.empty?
       Student.all
     else
-      found_student = Student.where("name like ?", student_name)
-      binding.pry
+      found_student = Student.where("name like ?", "#{student_name}")
     end
   end
 
